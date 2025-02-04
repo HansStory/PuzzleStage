@@ -22,7 +22,7 @@ public:
     FVector Direction;
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Platform Settings")
-    float Speed;
+    float MoveSpeed;
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Platform Settings")
     float MaxRange;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Platform Settings")

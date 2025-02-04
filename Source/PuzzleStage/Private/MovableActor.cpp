@@ -14,7 +14,7 @@ AMovableActor::AMovableActor()
     // 초기값 설정
     StartPos = GetActorLocation();
     Direction = FVector(1, 0, 0);
-    Speed = 500.0f;
+    MoveSpeed = 500.0f;
     MaxRange = 100.0f;
 }
 
@@ -29,7 +29,7 @@ void AMovableActor::Tick(float DeltaTime)
 {
     Super::Tick(DeltaTime);
 
-    AddActorLocalOffset(Direction * Speed * DeltaTime);
+    AddActorLocalOffset(Direction * MoveSpeed * DeltaTime);
 
     if (FVector::Dist(GetActorLocation(), StartPos) >= MaxRange)
     {
